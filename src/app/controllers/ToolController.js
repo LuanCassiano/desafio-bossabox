@@ -27,7 +27,7 @@ class ToolController {
             return res.status(200).json(tool)
             
         } catch (error) {
-            return error.message
+            return res.status(400).send(error.message)
         }
     }
 
@@ -43,10 +43,15 @@ class ToolController {
     }
 
     async update(req, res) {
+
+        const oldTool = await Tool.findById(req.params.id)
+        const { tags, data } = req.body
+
         try {
-            const tool = await Tool.findByIdAndUpdate(req.params.id, req.body, {
-                new: true
-            })
+            const tool = await Tool.findByIdAndUpdate(req.params.id, {
+                tags: [...oldTool.tags, ...tags],
+                data
+            }, { new: true })
     
             return res.status(200).json(tool)   
         } catch (error) {

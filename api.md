@@ -1,5 +1,3 @@
-# DESAFIO BOSSABOX BACKEND
-
 FORMAT: 1A
 
 HOST: http://localhost:3000

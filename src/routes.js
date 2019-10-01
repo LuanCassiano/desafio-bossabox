@@ -17,6 +17,6 @@ Routes.get('/api/tools', ToolController.index)
 Routes.get('/api/tools/:id', ToolController.show)
 Routes.post('/api/tools', ToolController.store)
 Routes.put('/api/tools/:id', ToolController.update)
-Routes.delete('/api/tools/:id')
+Routes.delete('/api/tools/:id', ToolController.destroy)
 
 module.exports = Routes

@@ -13,16 +13,14 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
 ## Cadastrar usuário [POST /api/user]
 
 + Request (application/json)
-    + Body
-        {
+    +   {
             "fullname": "John Doe",
             "email": "john.doe@mail.com",
             "password": "123456"
         }
 
 + Response 201 (application/json)
-    + Body
-        {
+    +   {
             "_id": "5d9368cfac95212cec170c2f",
             "fullname": "John Doe",
             "email": "john.doe@mail.com",
@@ -33,15 +31,13 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
 ## Autenticar usuário [POST /api/auth]
 
 + Request (application/json)
-    + Body
-        {
+    +   {
             "email" : "luan@teste.com.br",
             "password" : "123456"
         }
 
 + Response 200 (application/json)
-    + Body
-        {
+    +   {
             "user": {
                 "_id": "5d9368cfac95212cec170c2f",
                 "fullname": "John Doe",
@@ -60,8 +56,7 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
     + Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
 
 + Response 200 (application/json)
-    + Body
-        [
+    +   [
             {
                 "tags": [
                     "frontend",
@@ -96,8 +91,7 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
     + Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
 
 + Response 200 (application/json)
-    + Body
-        [
+    +   [
             {
                 "tags": [
                     "mobile",
@@ -124,8 +118,7 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
     + _id: `5d936b03ac95212cec170c30` - Identificador da ferramenta que deseja listar
 
 + Response 200 (application/json)
-    + Body
-        {
+    +   {
             "tags": [
                 "mobile",
                 "javascript",
@@ -148,8 +141,7 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
     Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
 
 + Request (application/json)
-    + Body 
-        {
+    +   {
             "title" : "React Native",
             "link" : "https://facebook.github.io/react-native/",
             "description" : "React Native é uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e IOS de forma nativa.",
@@ -157,8 +149,7 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
         }
 
 + Response 201 (application/json)
-    + Body 
-        {
+    +   {
             "tags": [
                 "mobile",
                 "javascript",
@@ -183,14 +174,12 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
     + _id: `5d936b03ac95212cec170c30` - Identificador da ferramenta que deseja atualizar
 
 + Request (application/json)
-    + Body 
-        {
+    +   {
             "tags": ["react", "native"]
         }
 
 + Response 200 (application/json)
-    + Body 
-        {
+    +   {
             "tags": [
                 "mobile",
                 "javascript",

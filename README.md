@@ -13,31 +13,38 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
 ## Cadastrar usuário [POST /api/user]
 
 + Request (application/json)
-    +   {
+    ```json 
+        {
             "fullname": "John Doe",
             "email": "john.doe@mail.com",
             "password": "123456"
         }
+    ```
 
 + Response 201 (application/json)
-    +   {
+    ```json
+        {
             "_id": "5d9368cfac95212cec170c2f",
             "fullname": "John Doe",
             "email": "john.doe@mail.com",
             "createdAt": "2019-10-01T14:55:11.722Z",
             "__v": 0
         }
+    ```
 
 ## Autenticar usuário [POST /api/auth]
 
 + Request (application/json)
-    +   {
+    ```json 
+        {
             "email" : "luan@teste.com.br",
             "password" : "123456"
         }
+    ```
 
 + Response 200 (application/json)
-    +   {
+    ```json
+        {
             "user": {
                 "_id": "5d9368cfac95212cec170c2f",
                 "fullname": "John Doe",
@@ -48,15 +55,19 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
             },
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTM2OGNmYWM5NTIxMmNlYzE3MGMyZiIsImlhdCI6MTU2OTk0NTUxNiwiZXhwIjoxNTcwNTUwMzE2fQ.fbtsPIa-_r08V5rYfv9u1x7fWv0ASwhNdB4sVReDVug"
         }
+    ```
 
 
 ## Listar todas as ferramentas [GET /api/tools]
 
 + Headers
-    + Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
+    ```json
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk"
+    ```
 
 + Response 200 (application/json)
-    +   [
+    ```json
+        [
             {
                 "tags": [
                     "frontend",
@@ -84,14 +95,18 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
                 "__v": 0
             }
         ]
+    ```
 
 ## Listar todas as ferramentas pela tag [GET /api/tools?tag=mobile]
 
 + Headers
-    + Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
+    ```json
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk"
+    ```
 
 + Response 200 (application/json)
-    +   [
+    ```json
+        [
             {
                 "tags": [
                     "mobile",
@@ -108,17 +123,21 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
                 "__v": 0
             }
         ]
+    ```
 
 ## Listar ferramenta por id [GET /api/tools/{_id}]
 
 + Headers
-    + Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
+    ```json
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk"
+    ```
 
 + Parameters
     + _id: `5d936b03ac95212cec170c30` - Identificador da ferramenta que deseja listar
 
 + Response 200 (application/json)
-    +   {
+    ```json
+        {
             "tags": [
                 "mobile",
                 "javascript",
@@ -133,23 +152,29 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
             "createdAt": "2019-10-01T15:04:35.476Z",
             "__v": 0
         }
+    ```
 
 
 ## Cadastrar ferramenta [POST /api/tools]
 
 + Headers
-    Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
+    ```json
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk"
+    ```
 
 + Request (application/json)
-    +   {
+    ```json
+        {
             "title" : "React Native",
             "link" : "https://facebook.github.io/react-native/",
             "description" : "React Native é uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e IOS de forma nativa.",
             "tags": ["mobile", "javascript", "ios", "android"]
         }
+    ```
 
 + Response 201 (application/json)
-    +   {
+    ```json    
+        {
             "tags": [
                 "mobile",
                 "javascript",
@@ -164,11 +189,14 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
             "createdAt": "2019-10-01T15:04:35.476Z",
             "__v": 0
         }
+    ```
 
 ## Atualizar ferramenta [PUT /api/tools/{_id}]
 
 + Headers
-    Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
+    ```json
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk"
+    ```
 
 + Parameters
     + _id: `5d936b03ac95212cec170c30` - Identificador da ferramenta que deseja atualizar

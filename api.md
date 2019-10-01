@@ -2,7 +2,7 @@
 
 FORMAT: 1A
 
-HOST: http://localhost:3000
+HOST: https://bossabox-backend.herokuapp.com
 
 # Desafio Bossabox Backend
 

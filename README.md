@@ -53,7 +53,7 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
 ## Listar todas as ferramentas [GET /api/tools]
 
 + Headers
-    Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
+    - Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
 
 + Response 200 (application/json)
 

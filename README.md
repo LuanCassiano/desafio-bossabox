@@ -174,12 +174,15 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
     + _id: `5d936b03ac95212cec170c30` - Identificador da ferramenta que deseja atualizar
 
 + Request (application/json)
-    +   {
+    ```json
+        {
             "tags": ["react", "native"]
         }
+    ```
 
 + Response 200 (application/json)
-    +   {
+    ```json 
+        {
             "tags": [
                 "mobile",
                 "javascript",
@@ -196,6 +199,7 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
             "createdAt": "2019-10-01T15:04:35.476Z",
             "__v": 0
         }
+    ```
 
 ## Remover ferramenta [DELETE /api/tools/{_id}]
 

@@ -16,7 +16,7 @@ class ToolController {
             return res.status(200).json(tools)
             
         } catch (error) {
-            return error.message
+            return res.status(400).send(error.message)
         }
     }
 
@@ -38,7 +38,7 @@ class ToolController {
             return res.status(201).json(tool)
             
         } catch (error) {
-            return error.message
+            return res.status(400).send(error.message)
         }
     }
 
@@ -55,7 +55,7 @@ class ToolController {
     
             return res.status(200).json(tool)   
         } catch (error) {
-            return error.message
+            return res.status(400).send(error.message)
         }
     }
 
@@ -67,7 +67,7 @@ class ToolController {
                 status: 'removed'
             })
         } catch (error) {
-            return error.message
+            return res.status(400).send(error.message)
         }
     }
 }

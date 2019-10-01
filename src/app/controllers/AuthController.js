@@ -25,7 +25,7 @@ class AuthController {
                 token: User.generateToken(user)
             })
         } catch (error) {
-            return error.message
+            return res.status(400).send(error.message)
         }
     }
 }

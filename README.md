@@ -232,7 +232,9 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
 ## Remover ferramenta [DELETE /api/tools/{_id}]
 
 + Headers
-    Authorization: Bearer `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk`
+    ```json
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOGQ5Zjc2MzIwNjg0M2RiY2QxMDA1ZSIsImlhdCI6MTU2OTU2MjUxMiwiZXhwIjoxNTcwMTY3MzEyfQ.jwkwLBNXaGehqwIxKXW8mhHOL-73yze5EDnLs5Q_hMk"
+    ```
 
 + Parameters
     + _id: `5d936b03ac95212cec170c30` - Identificador da ferramenta que deseja remover

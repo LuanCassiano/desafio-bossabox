@@ -240,3 +240,15 @@ Foi criado uma api simples para gerenciar ferramentas. As tecnologis utilizadas 
     + _id: `5d936b03ac95212cec170c30` - Identificador da ferramenta que deseja remover
 
 + Response 204
+
++ Comandos para rodar a aplicação, para que a aplicação rode é necessário configurar as variaveis ambiente citadas abaixo
+    + npm install - Para instalar todas as dependências. (Pasta node_modules)
+    + npm run dev - Para rodar o servidor em ambiente de dev. (Porta 3000)
+    
++ A configuração do banco de dados é feita através das variáveis ambiente
+    + crie um arquivo .env na raiz do projeto
+    + cole a url do banco de dados na variável DB_URL
+
+O banco de dados utilizado nesse projeto é o MongoDB, foi criado um servido na nuvem atrvés do MongoDB Atlas que pode ser encontrado em: https://www.mongodb.com/
+
+Para a configuração do token é necessário criar no .env a variável APP_SECRET, o valor da mesma pode ser igual o valor que está no .env.example

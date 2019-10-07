@@ -21,6 +21,7 @@ class ToolController {
     }
 
     async show(req, res) {
+
         try {
             const tool = await Tool.findById(req.params.id)
     
